@@ -1,0 +1,14 @@
+.loadGif{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+img{
+    width: 20em;
+    height: 20em;
+}
+
+.gif{
+    margin:0.7em;
+}

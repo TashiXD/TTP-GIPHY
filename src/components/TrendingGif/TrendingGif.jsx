@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-
+import LoadGif from "../LoadGif/LoadGif";
 /**
  * The TrendingGif components fetches the trending 50 gifs from the GIPHY API,
  * and using state we set the data we fetch into trendingGif
@@ -26,7 +26,7 @@ const TrendingGif = () => {
   }, []);
   return (
     <div>
-      <h1>Trending GIF</h1>
+      <LoadGif data={trendingGif} />
     </div>
   );
 };
