@@ -1,9 +1,10 @@
 import './App.css';
-
+import { TrendingGif } from './components';
 function App() {
   return (
     <div className="App">
-      <hi>Hello World</hi>
+      <h1>Gif search</h1>
+      <TrendingGif />
     </div>
   );
 }
