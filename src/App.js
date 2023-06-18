@@ -1,9 +1,10 @@
 import './App.css';
-import { TrendingGif,SearchGif } from './components';
+import { Topbar, TrendingGif,SearchGif} from './components';
+//Loads in our landing page
 function App() {
   return (
     <div className="App">
-      <h1>Gif search</h1>
+      <Topbar />
       <TrendingGif />
       <SearchGif />
     </div>
