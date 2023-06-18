@@ -10,7 +10,7 @@ import "./topbar.css";
 const Topbar = () => {
   return (
     <div className="topBar">
-      <h1>Gif search</h1>
+      <h1>Gif Finder</h1>
       <div className="btn">
         <input placeholder="search for gif"></input>
         <Button btnName="search" />
