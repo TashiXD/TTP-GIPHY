@@ -1,6 +1,11 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 
+/**
+ * This component looks up the search term and fetchs the 
+ * list of gif based on the search term and passes the list of gif
+ * to load gif component
+ */
 const SearchGif = (props) =>{
     const [gifList, setGifList] = useState([]);
 
