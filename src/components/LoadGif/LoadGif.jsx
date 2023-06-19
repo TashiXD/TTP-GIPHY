@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState,useEffect } from "react";
 import "./loadgif.css";
 
 /**
@@ -6,10 +6,16 @@ import "./loadgif.css";
  * either the TrendingGif or the SearchGif componements with the information
  * about the gif
  */
-const LoadGif = (props) => {
+const LoadGif = ({data}) => {
+  const [gifList, setGifList] = useState([]);
+
+  useEffect(() => {
+    setGifList(data);
+  }, []);
+
   return (
     <div className="loadGif">
-      {props.data.map((gif) => {
+      {gifList.map((gif) => {
         return (
           <div key={gif.id} className="gif">
             <img src={gif.images.downsized.url} />
