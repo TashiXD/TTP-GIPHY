@@ -6,12 +6,12 @@ import "./loadgif.css";
  * either the TrendingGif or the SearchGif componements with the information
  * about the gif
  */
-const LoadGif = (props) => {
-  const [gifList, setGifList] = useState(props.data);
+const LoadGif = ({data}) => {
+  const [gifList, setGifList] = useState([]);
 
   useEffect(() => {
-    setGifList(props.data);
-  }, [props.data]);
+    setGifList(data);
+  }, []);
 
   return (
     <div className="loadGif">
