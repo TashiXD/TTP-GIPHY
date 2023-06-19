@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState,useEffect } from "react";
 import "./loadgif.css";
 
 /**
@@ -7,9 +7,15 @@ import "./loadgif.css";
  * about the gif
  */
 const LoadGif = (props) => {
+  const [gifList, setGifList] = useState(props.data);
+
+  useEffect(() => {
+    setGifList(props.data);
+  }, [props.data]);
+
   return (
     <div className="loadGif">
-      {props.data.map((gif) => {
+      {gifList.map((gif) => {
         return (
           <div key={gif.id} className="gif">
             <img src={gif.images.downsized.url} />
